@@ -1,0 +1,45 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+desktop.ini
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.logs
+*.iml
+target/
+build/
+.gradle/
+
+# Frontend
+/dist
+/build
+.cache/
+coverage/
+
+# Backend
+/backend/target/
+/backend/build/
+/backend/out/
+
+# Misc
+*.log
+.DS_Store
+Thumbs.db 
