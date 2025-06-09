@@ -1,0 +1,37 @@
+@startuml
+class User {
+  +UUID id
+  +String email
+  +String password
+  +String firstName
+  +String lastName
+  +String role
+  +Boolean isActive
+  +Date lastLogin
+}
+
+class File {
+  +UUID id
+  +String title
+  +String description
+  +String fileName
+  +String fileType
+  +int fileSize
+  +String storedFileName
+  +int downloadCount
+  +Boolean isPublic
+}
+
+class Subject {
+  +UUID id
+  +String name
+  +String level
+  +String description
+  +Boolean isActive
+  +int order
+}
+
+User "1" -- "*" File : uploads >
+Subject "1" -- "*" File : contains >
+
+@enduml 

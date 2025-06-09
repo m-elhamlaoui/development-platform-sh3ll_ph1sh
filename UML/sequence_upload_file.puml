@@ -1,0 +1,13 @@
+@startuml
+actor User
+participant "Frontend" as FE
+participant "Backend" as BE
+participant "Database" as DB
+
+User -> FE : Select file, enter details
+FE -> BE : POST /upload (file, details)
+BE -> DB : Insert file record
+DB --> BE : File ID
+BE -> FE : Upload success response
+FE -> User : Show confirmation
+@enduml 

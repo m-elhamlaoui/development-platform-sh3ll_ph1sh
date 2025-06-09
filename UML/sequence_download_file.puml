@@ -1,0 +1,13 @@
+@startuml
+actor User
+participant "Frontend" as FE
+participant "Backend" as BE
+participant "Database" as DB
+
+User -> FE : Click download on file
+FE -> BE : GET /download/{fileId}
+BE -> DB : Query file record
+DB --> BE : File metadata
+BE -> FE : File data (download)
+FE -> User : Save file
+@enduml 
